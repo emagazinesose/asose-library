@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+:root {
+    --primary: #428e7c;
+    --white: #fff;
+    --grey: #dfdfdf;
+    --black: #2e2e2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+html,
+body {
+    font-family: "Teachers", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 85vh;
+    margin: 5vh 10vw;
+}
+
+.credit {
+    font-size: 25px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul a {
+    display: block;
+}
+
+em {
+    width: 100%;
+    text-align: right;
+    color: #428e7c;
+    font-weight: 500;
+    font-family: "Spectral", serif;
+    font-style: normal;
+}
+
+em::selection,
+footer p::selection {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.header {
+    border-bottom: 1px solid var(--grey);
+}
+
+.real {
+    position: fixed;
+    z-index: 999;
+    background-color: #dfdfdfae;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10vw;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.nav-link:hover {
+    color: var(--primary);
+    text-emphasis: 1px solid var(--primary);
+}
+
+.nav-logo {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    margin: 3vh 0;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.intro {
+    font-size: 25px;
+}
+
+.vidcard video,
+.vidcard img {
+    /* margin: 3vh 0; */
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.vidcard {
+    border: 2px dashed var(--primary);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 5vh;
+    display: flex;
+    gap: 3vh;
+    text-align: justify;
+}
+
+.links {
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap:5vw;
+    justify-content: center;
+}
+
+ul a:visited {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+ul a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.headlink {
+    font-size: 25px;
+    color: var(--black);
+}
+
+.linkcard {
+    width: 550px;
+    border: 2px dashed var(--primary);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    text-align: justify;
+}
+
+.vidcard .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vidcard .bookname {
+    font-size: 30px;
+    font-weight: 600;
+    /* margin-bottom: 30px; */
+    color: var(--primary);
+}
+
+.vidcard .bookreviewer {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: right;
+}
+
+.pdftitle {
+    display: inline;
+    font-size: 45px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cardholder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.pdfcard {
+    max-width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.table-gap {
+    height: 7vh;
+    width: 100%;
+    top: 9vh;
+    position: sticky;
+    background-color: var(--white);
+    z-index: 998;
+}
+
+table {
+    overflow-x: auto;
+}
+
+table td, table th {
+    font-size: smaller;
+    border: 1px solid var(--primary);
+    line-height: 1.4;
+    padding: 10px;
+}
+
+th {
+    position: sticky;
+    top: 15vh;
+    background-color: #dfdfdfae;
+    backdrop-filter: blur(15px);
+    z-index: 999; 
+}
+
+footer {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+    margin-top: 5vh;
+    padding: 10px;
+}
+
+.syllabus {
+    margin-top: 5vh;
+    width: 100%;
+}
+
+.syllbut {
+    width: 100%;
+    display: block;
+}
+
+.compbut {
+    width: 100%;
+    display: block;
+    border:none;
+    padding : 30px;
+    background : var(--primary); 
+    color : var(--white);
+    font-size : 40px;
+    width: 100%;
+    cursor: pointer;
+    font-family: "Teachers";
+}
+
+.compbut a {
+    color: var(--white);
+}
+
+.sylltitle {
+  padding : 30px;
+  background : var(--primary); 
+  color : var(--white);
+  font-size : 40px;
+  width: 100%;
+  /* font-variant : small-caps; */
+  cursor : pointer;
+  display: block;
+}
+
+.sylltitle::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+.slide a {
+    font-size: 25px;
+}
+
+.slide li {padding : 30px;}
+
+#touch {position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {height: calc(92px*4);} 
+
+@media (max-width: 375px) {
+    .nav-logo p {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1450px) {
+    .linkcard{
+        text-align:center;
+        width:100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .nav-menu {
+        top: 60px;
+        right: -100%;
+        flex-direction: column;
+        position: fixed;
+        z-index: 999;
+        background-color: var(--white);
+        color: var(--primary);
+        opacity: 0.5;
+        width: 100%;
+        height: 90vh;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        right: 0%;
+        opacity: 1;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .vidcard {
+        flex-direction: column;
+    }
+
+    .vidcard .left video {
+        width: 100%;
+        height: 300px;
+    }
+
+    .vidcard .bookname,
+    .vidcard .bookreviewer {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
