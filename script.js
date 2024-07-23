@@ -14,8 +14,9 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
 const searchInput = document.getElementById('search-input');
-  const tableBody = document.querySelector('.myTable');
+const tableBody = document.querySelector('.myTable');
 
   searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();

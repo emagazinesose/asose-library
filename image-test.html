@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body><input type="file" id="add-img" />
-    <!-- Create a container element to hold the images -->
-<div id="image-container"></div>
-<div id="image-container"></div>
-<div id="image-container"></div>
-<div id="image-container"></div>
+<html>
+  <head>
+    <title>Image Gallery</title>
+    <style>
+      #image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #image-gallery img {
+        width: 350px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+      #image-gallery img:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="image-gallery"></div>
+    <script>
+      const imageGallery = document.getElementById("image-gallery");
+      const imageFiles = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/filereader@0.10.3/FileReader.min.js">
-var sheet = document.styleSheets[1];
-
-function fileReader(e) {
-  if(window.FileReader) {
-    var file  = e.target.files[0];
-    var reader = new FileReader();
-    if (file && file.type.match('image.*')) {
-      reader.readAsDataURL(file);
-    } else {
-      console.log('please add an image')
-    }
-    reader.onloadend = function (e) {
-      sheet.insertRule("#image-container" + "{ background:url(" + reader.result + ")}", 0);
-    }
-  }
-}
-
-document.getElementById('add-img').addEventListener('change', fileReader, false);
-</script> -->
-</body>
+      imageFiles.forEach((image) => {
+        const img = document.createElement("img");
+        img.src = `assets/review images/${image}`;
+        imageGallery.appendChild(img);
+      });
+    </script>
+  </body>
 </html>

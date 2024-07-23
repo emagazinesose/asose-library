@@ -91,9 +91,9 @@ footer p::selection {
 
 .real {
     position: fixed;
-    z-index: 999;
-    background-color: #dfdfdfae;
-    backdrop-filter: blur(15px);
+    z-index: 1000;
+    background-color: #ffffff99;
+    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,8 +103,8 @@ footer p::selection {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10vw;
-    color: white;
+    padding: 2vh 10vw;
+    /* color: white; */
 }
 
 .hamburger {
@@ -135,11 +135,15 @@ footer p::selection {
 .nav-link {
     font-size: 18px;
     font-weight: 600;
-    color: #428e7c99;
-    border-bottom: 1px solid transparent;
+    /* color: #428e7c99; */
+    border-radius: 2px;
+    padding: 2px;
+    color: var(--primary);
+    /* border-bottom: 1px solid transparent; */
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-logo p:hover {
     color: var(--primary);
     transform: scale(1.05);
     border-bottom: 1px solid var(--primary);
@@ -177,7 +181,8 @@ footer p::selection {
 }
 
 .vidcard video,
-.vidcard img, .imgcard img{
+.vidcard img,
+.imgcard img {
     /* margin: 3vh 0; */
     height: 250px;
     width: 200px;
@@ -188,8 +193,8 @@ footer p::selection {
 .imgcard {
     border: 2px dashed var(--primary);
     /* width: 100%; */
-    background-color: #ffffff11;
-    backdrop-filter: blur(5px);
+    background-color: #dfdfdf11;
+    backdrop-filter: blur(2px);
     border-radius: 10px;
     padding: 25px;
     margin-top: 5vh;
@@ -211,7 +216,7 @@ footer p::selection {
 .imgcard:hover {
     z-index: 998;
     transform: scale(1.5);
-    transition: ease-in .1s;
+    transition: ease-in-out .1s;
 }
 
 .vidcard {
@@ -460,8 +465,9 @@ footer {
         display: flex;
         justify-content: center;
     }
+
     .imgholder {
-    justify-content: center;
+        justify-content: center;
     }
 
     .nav-menu {
