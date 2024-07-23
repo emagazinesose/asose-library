@@ -35,6 +35,10 @@ body {
     margin: 5vh 10vw;
 }
 
+.search-input {
+    width: 100%;
+}
+
 .credit {
     font-size: 20px;
     text-align: right;
