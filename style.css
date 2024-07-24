@@ -330,6 +330,7 @@ ul a {
 
 table {
     table-layout: fixed;
+    /* border: 1px solid var(--primary); */
     width: 100%;
 }
 
@@ -346,7 +347,7 @@ table th {
 th {
     position: sticky;
     top: 15vh;
-    background-color: #428e7c99 !important;
+    background-color: #428e7c19 !important;
     backdrop-filter: blur(15px);
     z-index: 998;
 }
