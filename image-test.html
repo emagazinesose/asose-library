@@ -3,21 +3,35 @@
   <head>
     <title>Image Gallery</title>
     <style>
-      #image-gallery {
+      /* #image-gallery {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-      }
+        gap: 20px;
+      } */
+
       #image-gallery img {
-        width: 350px;
-        height: 200px;
+        width: 25vw;
         object-fit: cover;
-        margin: 10px;
-        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
       }
+
       #image-gallery img:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+      }
+
+      #image-gallery {
+        max-width: 80vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      #image-gallery img {
+        max-width: 200px;
+        height: 100%;
+        object-fit: cover;
       }
     </style>
   </head>
@@ -25,13 +39,23 @@
     <div id="image-gallery"></div>
     <script>
       const imageGallery = document.getElementById("image-gallery");
-      const imageFiles = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 
+      function generateImageNames(num) {
+        const imageNames = [];
+        for (let i = 1; i <= num; i++) {
+          imageNames.push(i + ".jpg");
+        }
+        return imageNames;
+      }
+
+      const imageFiles = generateImageNames(4);
       imageFiles.forEach((image) => {
         const img = document.createElement("img");
         img.src = `assets/review images/${image}`;
         imageGallery.appendChild(img);
       });
+
+      // console.log(generateImageNames(5));
     </script>
   </body>
 </html>
