@@ -382,6 +382,12 @@ footer {
     font-family: "Teachers";
 }
 
+.compbut a::after {
+    float: right;
+    right: 10%;
+    content: "↗";
+}
+
 .compbut a {
     display: block;
     text-align: left;
