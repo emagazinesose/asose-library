@@ -81,7 +81,7 @@ em {
 
 em::selection,
 footer p::selection {
-    background-color: var(--white);
+    background-color: var(--grey);
     color: var(--primary);
 }
 
@@ -172,7 +172,6 @@ footer p::selection {
 }
 
 .intro {
-    font-size: 25px;
 }
 
 .dictionaries {
