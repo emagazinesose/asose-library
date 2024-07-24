@@ -172,6 +172,7 @@ footer p::selection {
 }
 
 .intro {
+    font-size: 28px;
 }
 
 .dictionaries {
