@@ -79,8 +79,20 @@ em {
     font-style: normal;
 }
 
+.intro h1 {
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    color: #428e7c;
+    font-weight: 500;
+    font-family: "Spectral", serif;
+    font-style: normal;
+}
+
 em::selection,
-footer p::selection {
+footer p::selection,
+.intro h1::selection,
+img::selection {
     background-color: var(--grey);
     color: var(--primary);
 }
@@ -172,6 +184,7 @@ footer p::selection {
 }
 
 .intro {
+    text-align: justify;
     font-size: 28px;
 }
 
@@ -450,6 +463,10 @@ footer {
     .tableno {
         width: 0%;
         opacity: 0;
+    }
+
+    .intro {
+        text-align: left;
     }
 }
 
