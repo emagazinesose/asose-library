@@ -1,79 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery of Library</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="real">
-        <a href="index.html" class="nav-logo"
-          ><img src="assets/logo.png" alt="logo" height="40px" />
-          <p>ASOSE, Sector 11, Rohini</p></a
-        >
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="vid.html" class="nav-link">Book Reviews</a>
-          </li>
-          <li class="nav-item">
-            <a href="books.html" class="nav-link">Books</a>
-          </li>
-          <li class="nav-item">
-            <a href="magazine.html" class="nav-link">e-Magazine</a>
-          </li>
-          <li class="nav-item">
-            <a href="dictionary.html" class="nav-link">Dictionary</a>
-          </li>
-          <li class="nav-item">
-            <a href="eres.html" class="nav-link">e-Resources</a>
-          </li>
-          <li class="nav-item">
-            <a href="antipp.html" class="nav-link">Policies</a>
-          </li>
-          <li class="nav-item">
-            <a href="gallery.html" class="nav-link">Gallery </a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-
-      <nav class="navbar">
-        <a href="index.html" class="nav-logo">
-          <p>ASOSE, Sector 11, Rohini</p></a
-        >
-      </nav>
-    </header>
-    <main>
-      <div class="container">
-        <div id="cincopa_c2f2d8">...</div>
-        <script type="text/javascript">
-          var cpo = [];
-          cpo["_object"] = "cincopa_c2f2d8";
-          cpo["_fid"] = "AMFAhU_mhs9N";
-          var _cpmp = _cpmp || [];
-          _cpmp.push(cpo);
-          (function () {
-            var cp = document.createElement("script");
-            cp.type = "text/javascript";
-            cp.async = true;
-            cp.src = "https://rtcdn.cincopa.com/libasync.js";
-            var c = document.getElementsByTagName("script")[0];
-            c.parentNode.insertBefore(cp, c);
-          })();
-        </script>
+<html>
+<head>
+  <title>Swiper Fade Carousel</title>
+  <link rel="stylesheet" href="swiper-bundle.min.css">
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="gallery/20240723_124259.jpg" alt="Image 1">
       </div>
-    </main>
-    <footer class="footer">
-      <p>&copy; 2024 ASOSE, Sector 11, Rohini</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      <div class="swiper-slide">
+        <img src="gallery/IMG-20240719-WA0004.jpg" alt="Image 2">
+      </div>
+      </div>
+  </div>
+
+  <script src="swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'fade',
+      speed: 800, // Adjust transition speed
+      autoplay: {
+        delay: 3000, // Adjust autoplay delay
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
 </html>
