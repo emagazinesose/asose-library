@@ -169,6 +169,7 @@ img::selection {
     font-size: 18px;
     font-weight: 700;
     color: var(--primary);
+    filter: drop-shadow(0 0 5px var(--white));
 }
 
 .hero {
@@ -575,19 +576,16 @@ footer {
 
 .loader-container {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #ffffffe9;
-    /* Replace with your desired background color */
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.loader {
-    /* Your loader animation styles here */
 }
 
 .loader-logo {
@@ -595,8 +593,18 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: levitate 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     width: 100px;
-    /* Replace with your desired logo width */
     height: auto;
     margin: 0 auto;
+}
+
+@keyframes levitate {
+    0% {
+        transform: translate(-50%, -100%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
 }
