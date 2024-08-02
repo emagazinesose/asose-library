@@ -18,7 +18,7 @@ function closeMenu() {
 const searchInput = document.getElementById('search-input');
 const tableBody = document.querySelector('.myTable');
 
-  searchInput.addEventListener('input', (e) => {
+searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
     const rows = tableBody.rows;
 
@@ -43,4 +43,4 @@ const tableBody = document.querySelector('.myTable');
         row.style.display = 'none';
       }
     }
-  });
+});
