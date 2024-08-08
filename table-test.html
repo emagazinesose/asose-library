@@ -1,93 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Auto-Updating Table with Pagination</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Data Table with Pagination and Search</title>
+    <link rel="stylesheet" href="table.css" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      #pagination {
-        display: grid;
-        grid-template-columns: repeat(18, auto);
-        gap: 10px;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      #pagination a {
-        text-decoration: none;
-        color: #333;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        margin: 0 5px;
-      }
-
-      #pagination a.active {
-        background-color: #000000;
-      }
-    </style>
   </head>
   <body>
-    <table id="myTable">
-      <thead>
-        <tr>
-          <th style="display: sticky; top: -10%">Name</th>
-          <th style="display: sticky; top: -10%">Age</th>
-          <th style="display: sticky; top: -10%">City</th>
-          <th style="display: sticky; top: -10%">Some</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody"></tbody>
-    </table>
-    <div id="pagination"></div>
+    <div class="container">
+      <input type="text" id="search" placeholder="Search by Customer Number" />
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Cust. No.</th>
+            <th>No. of Units</th>
+            <th>Rate</th>
+            <th>Bill Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="pagination"></div>
+    </div>
 
-    <script>
-      const rowsPerPage = 200; // Adjust as needed
-      let currentPage = 1;
-
-      function updateTable() {
-        fetch("data.csv")
-          .then((response) => response.text())
-          .then((data) => {
-            const rows = data.split("\n").slice(1); // Skip header row
-            const totalPages = Math.ceil(rows.length / rowsPerPage);
-
-            // Create table body content
-            const tableBody = document.getElementById("tableBody");
-            tableBody.innerHTML = "";
-            const start = (currentPage - 1) * rowsPerPage;
-            const end = currentPage * rowsPerPage;
-            const currentRows = rows.slice(start, end);
-
-            currentRows.forEach((row) => {
-              const columns = row.split(",");
-              const newRow = document.createElement("tr");
-              columns.forEach((column) => {
-                const newCell = document.createElement("td");
-                newCell.textContent = column;
-                newRow.appendChild(newCell);
-              });
-              tableBody.appendChild(newRow);
-            });
-
-            // Create pagination controls
-            const pagination = document.getElementById("pagination");
-            pagination.innerHTML = "";
-
-            for (let i = 1; i <= totalPages; i++) {
-              const pageLink = document.createElement("a");
-              pageLink.href = "#";
-              pageLink.textContent = i;
-              pageLink.onclick = () => {
-                currentPage = i;
-                updateTable();
-              };
-              pagination.appendChild(pageLink);
-            }
-          });
-      }
-
-      // Initial load
-      updateTable();
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="table.js"></script>
+    <script src="loader.js"></script>
   </body>
 </html>
