@@ -25,7 +25,7 @@ body {
     font-weight: 400;
     background-color: var(--white);
     color: var(--black);
-    cursor: crosshair;
+    cursor: var(--primary);
 }
 
 .container {
@@ -162,7 +162,11 @@ img::selection {
 .nav-logo p:hover {
     transform: scale(1.05);
     border-width: 4px;
-    transition: 0.3s;
+    transition: 0.1s;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .nav-logo {
