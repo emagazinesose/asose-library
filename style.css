@@ -152,11 +152,13 @@ img::selection {
 }
 
 .bar {
+    display: block;
     width: 25px;
-    height: 3px;
+    height: 2.5px;
     margin: 5px auto;
-    background-color: var(--primary);
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    background-color: var(--primary);
 }
 
 .nav-menu {
