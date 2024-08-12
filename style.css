@@ -3,7 +3,7 @@
 
 :root {
     --primary: #2f7564;
-    --white: #fff;
+    --white: #f6f9f6;
     --grey: #dfdfdf;
     --black: #2e2e2e;
 }
@@ -99,6 +99,28 @@ em {
     font-style: normal;
 }
 
+abbr {
+    font-style: italic;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+abbr[title] {
+    cursor: help;
+}
+
+abbr[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    z-index: 1;
+    background: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--grey);
+    padding: 5px;
+    font-size: 18px;
+}
+
+
 em::selection,
 footer p::selection,
 .intro h1::selection,
@@ -176,38 +198,6 @@ button:hover {
     font-size: 18px;
     font-weight: 700;
     color: var(--primary);
-}
-
-.nav-logo p {
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    0% {
-        filter: drop-shadow(0 0 5px var(--primary));
-    }
-
-    50% {
-        filter: drop-shadow(0 0 20px var(--primary));
-    }
-
-    100% {
-        filter: drop-shadow(0 0 5px var(--primary));
-    }
-}
-
-@keyframes cool-animation {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-
-    50% {
-        transform: scale(1.1) rotate(5deg);
-    }
-
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
 }
 
 .hero {
@@ -396,6 +386,13 @@ footer {
     .nav-logo p {
         visibility: hidden;
     }
+
+    .compbut,
+    .sylltitle {
+        width: 100%;
+        padding: 10px;
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -517,30 +514,22 @@ footer {
 }
 
 .loader-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100px;
     height: auto;
     margin: 0 auto;
-    /* animation: glow 2s infinite alternate, cool-animation 3s infinite alternate; */
+    animation: logo 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes logo {
     0% {
-        border-width: 2px;
+        transform: scale(1);
     }
 
-    100% {}
-}
-
-@keyframes levitate {
-    0% {
-        transform: translate(-50%, -100%);
+    50% {
+        transform: scale(2);
     }
 
     100% {
-        transform: translate(-50%, -50%);
+        transform: scale(1);
     }
 }
