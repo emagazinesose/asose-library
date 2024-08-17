@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Swiper Fade Carousel</title>
-  <link rel="stylesheet" href="swiper-bundle.min.css">
-</head>
-<body>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="gallery/20240723_124259.jpg" alt="Image 1">
-      </div>
-      <div class="swiper-slide">
-        <img src="gallery/IMG-20240719-WA0004.jpg" alt="Image 2">
-      </div>
-      </div>
-  </div>
-
-  <script src="swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'fade',
-      speed: 800, // Adjust transition speed
-      autoplay: {
-        delay: 3000, // Adjust autoplay delay
-        disableOnInteraction: false,
-      },
-    });
-  </script>
-</body>
+  <head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <script>
+      const galery = [];
+      for (let i = 1; i <= 13; i++) {
+        const image = i + ".jpg";
+        galery.push(image);
+      }
+      console.log(galery);
+      for (let o = 1; o <= galery.length; o++) {
+        const img = document.createElement("img");
+        img.src = `gallery/${galery[o]}`;
+        document.body.appendChild(img);
+      }
+    </script>
+  </body>
 </html>

@@ -580,9 +580,3 @@ footer {
         transform: scale(1);
     }
 }
-
-@media (max-width: 600px) {
-    .hero img {
-        visibility: hidden;
-    }    
-}
