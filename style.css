@@ -172,15 +172,15 @@ img::selection {
 
 .nav-item {
     margin-left: 15px;
+    padding: 5px 10px;
 }
 
 .nav-link {
     font-size: 18px;
     font-weight: 600;
-    padding: 2px;
+    padding: 2px 0;
     border-radius: 2px;
     color: var(--primary);
-    border-bottom: 1px solid var(--primary);
     transition: 0.3s;
 }
 
@@ -208,8 +208,9 @@ nav ul li:nth-child(3n) .nav-link {
 .nav-link:hover {
     /* background-color: var(--primary); */
     border-top: 1px var(--primary) solid;
-    padding: 5px 10px;
-    color: var(--white);
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 2px 10px;
     transition: 0.3s;
 }
 
@@ -236,6 +237,7 @@ button:hover {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    /* visibility: visible; */
 }
 
 .intro {
@@ -577,4 +579,10 @@ footer {
     100% {
         transform: scale(1);
     }
+}
+
+@media (max-width: 600px) {
+    .hero img {
+        visibility: hidden;
+    }    
 }
