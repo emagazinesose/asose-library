@@ -2,9 +2,56 @@
 <html>
   <head>
     <title>Gallery</title>
-    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
   </head>
   <body>
+    <header class="header">
+      <nav class="real">
+        <a href="index.html" class="nav-logo"
+          ><img src="assets/logo.png" alt="logo" height="40px" />
+          <p>ASOSE, Sector 11, Rohini</p></a
+        >
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="vid.html" class="nav-link">Book Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="books.html" class="nav-link">Books</a>
+          </li>
+          <li class="nav-item">
+            <a href="magazine.html" class="nav-link">e-Magazine</a>
+          </li>
+          <li class="nav-item">
+            <a href="dictionary.html" class="nav-link">Dictionary</a>
+          </li>
+          <li class="nav-item">
+            <a href="eres.html" class="nav-link">e-Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="antipp.html" class="nav-link">Policies</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <p>ASOSE, Sector 11, Rohini</p></a
+        >
+      </nav>
+    </header>
+    <div class="img-container">
+      <div class="imgctr"></div>
+    </div>
     <script>
       const galery = [];
       for (let i = 1; i <= 13; i++) {
@@ -12,11 +59,14 @@
         galery.push(image);
       }
       console.log(galery);
-      for (let o = 1; o <= galery.length; o++) {
+      for (let o = 1; o <= 12; o++) {
         const img = document.createElement("img");
         img.src = `gallery/${galery[o]}`;
-        document.body.appendChild(img);
+        const imgcard = document.createElement("div");
+        imgcard.appendChild(img);
+        document.querySelector(".imgctr").appendChild(imgcard);
       }
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

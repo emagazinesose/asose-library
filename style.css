@@ -38,6 +38,14 @@ body {
     margin: 5vh 10vw;
 }
 
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 85vh;
+    margin: 10vh 5vw;
+}
+
 #search-input {
     position: fixed;
     top: 12%;
@@ -171,7 +179,7 @@ img::selection {
 }
 
 .nav-item {
-    margin-left: 15px;
+    /* margin-left: 15px; */
     padding: 5px 10px;
 }
 
@@ -209,7 +217,6 @@ nav ul li:nth-child(3n) .nav-link {
     /* background-color: var(--primary); */
     border-top: 1px var(--primary) solid;
     border-bottom: 1px solid var(--primary);
-    color: var(--primary);
     padding: 2px 10px;
     transition: 0.3s;
 }
@@ -272,6 +279,37 @@ button:hover {
     background-color: rgba(223, 223, 223, 0.07);
     backdrop-filter: blur(2px);
 }
+
+
+.imgctr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    /* Adjust gap as needed */
+}
+
+.imgctr div {
+    border: 2px dashed var(--primary);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 2vh;
+    display: flex;
+    background-color: rgba(223, 223, 223, 0.07);
+    backdrop-filter: blur(2px);
+    width: calc(30% - 16px);
+    /* Adjust for gap */
+}
+
+.imgctr div img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 
 .linkcard {
     width: 550px;
