@@ -298,13 +298,25 @@ button:hover {
     display: flex;
     background-color: rgba(223, 223, 223, 0.07);
     backdrop-filter: blur(2px);
-    width: 300px;
-    /* Adjust for gap */
+    width: 450px;
+    height: 300px;
 }
+
+/* .imgctr div:hover{
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(223, 223, 223, 0.07);
+    backdrop-filter: blur(2px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+} */
 
 .imgctr div img {
     width: 100%;
-    height: auto;
+    height: 100%;
     /* Maintain aspect ratio */
     object-fit: cover;
     border-radius: 10px;
