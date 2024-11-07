@@ -234,6 +234,8 @@ button:hover {
     color: var(--primary);
 }
 
+/* hero styling */
+
 .hero {
     width: 100%;
 }
@@ -244,7 +246,6 @@ button:hover {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-    /* visibility: visible; */
 }
 
 .intro {
@@ -631,6 +632,4 @@ footer {
     }
 }
 
-@media (max-width: 1000px) {
-
-}
+@media (max-width: 1000px) {}
