@@ -206,6 +206,47 @@ nav ul li:nth-child(3n) .nav-link {
     border-bottom: 1px solid var(--primary);
     color: var(--primary);
 } */
+/* styles.css */
+
+/* Style for the notification bar */
+.notification-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    /* position: fixed; */
+    width: 100%;
+    margin-top: 25px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the notification link */
+.notification-link {
+    /* width: 100%; */
+    margin-left: 20px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* Style for the close button */
+.close-btn {
+    color: white;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
 
 .nav-logo p:hover {
     transform: scale(1.05);
@@ -370,6 +411,16 @@ button:hover {
 .pdf {
     width: 100%;
     aspect-ratio: 4 / 3;
+}
+
+.pdftitle {
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 500;
+    font-family: "Spectral", serif;
+    font-style: normal;
 }
 
 .right {
