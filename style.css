@@ -559,6 +559,12 @@ footer {
     }
 }
 
+@media (max-width:900px) {
+    .award {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 1450px) {
     .linkcard {
         text-align: center;
@@ -570,6 +576,7 @@ footer {
     .hero {
         flex-wrap: wrap-reverse;
     }
+
     .hero img {
         height: 300px;
         width: 100%;
@@ -693,7 +700,7 @@ footer {
 
 /* awards section magazine */
 
-.award {
+/* .award {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -711,5 +718,71 @@ footer {
 .awardimg {
     height: 250px;
     width: 400px;
-    background-color: var(--primary);
+    background-image: url(assets/images/magazine_award.jpg);
+    object-fit: cover;
+} */
+
+/* Style for the award container */
+/* Style for the award container */
+.award {
+    display: flex;
+    gap: 20px;
+    background-color: #fdf6e3;
+    /* Light beige background for warmth */
+    border: 1px solid #b58900;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.483);
+    position: relative;
+    /* Add this to contain the :after element */
+    overflow: hidden;
+    /* Ensure the shine effect doesn't overflow */
+}
+
+/* Shine effect */
+.awardimg:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.0) 0%, rgba(228, 188, 65, 0.5) 50%, rgba(255, 255, 255, 0.0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 2s infinite;
+}
+
+/* Shine animation */
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+
+/* Style for the award image container */
+.awardimg {
+    background-image: url('assets/images/magazine_award.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-height: 400px;
+    min-height: 200px;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+}
+
+/* Style for the text inside the award container */
+.award .text {
+    max-width: 800px;
+    font-size: 20px;
+    font-weight: 100;
+    color: #b58900;
+    line-height: 1.5;
+    text-align: justify;
 }
