@@ -99,7 +99,8 @@ em {
     font-style: normal;
 }
 
-.intro h1 {
+.main h1 {
+    margin-top: 25px;
     width: 100%;
     font-size: 35px;
     text-align: center;
@@ -278,17 +279,21 @@ button:hover {
 
 .hero {
     width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
 }
 
 .hero img {
-    margin: 3vh 0;
+    margin: 25px;
     height: 400px;
-    width: 100%;
+    width: 600px;
     border-radius: 10px;
     object-fit: cover;
 }
 
 .intro {
+    /* width: 500px; */
     text-align: justify;
     font-size: 28px;
     color: var(--black);
@@ -562,9 +567,13 @@ footer {
 }
 
 @media (max-width: 1350px) {
+    .hero {
+        flex-wrap: wrap-reverse;
+    }
     .hero img {
         height: 300px;
         width: 100%;
+        margin: 25px 0;
     }
 
     .imgcard {
@@ -682,4 +691,25 @@ footer {
     }
 }
 
-@media (max-width: 1000px) {}
+/* awards section magazine */
+
+.award {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.award h4 {
+    font-size: 25px;
+    font-weight: 100;
+    width: 800px;
+    text-align: justify;
+}
+
+.awardimg {
+    height: 250px;
+    width: 400px;
+    background-color: var(--primary);
+}
