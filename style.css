@@ -562,6 +562,9 @@ footer {
 @media (max-width:900px) {
     .award {
         flex-wrap: wrap;
+        /* centering the card */
+        transform: translate(-50%);
+        left: 50%;
     }
 }
 
@@ -728,27 +731,24 @@ footer {
     display: flex;
     gap: 20px;
     background-color: #fdf6e3;
-    /* Light beige background for warmth */
     border: 1px solid #b58900;
     border-radius: 8px;
     padding: 20px;
     margin: 30px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.483);
     position: relative;
-    /* Add this to contain the :after element */
     overflow: hidden;
-    /* Ensure the shine effect doesn't overflow */
 }
 
 /* Shine effect */
-.awardimg:after {
+.award:after {
     content: "";
     position: absolute;
     top: 0;
     left: -75%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.0) 0%, rgba(228, 188, 65, 0.5) 50%, rgba(255, 255, 255, 0.0) 100%);
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.0) 0%, rgba(228, 187, 65, 0.5) 50%, rgba(255, 255, 255, 0.0) 100%);
     transform: skewX(-25deg);
     animation: shine 2s infinite;
 }
