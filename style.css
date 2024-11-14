@@ -27,7 +27,8 @@ body {
     font-weight: 400;
     background-color: var(--white);
     color: var(--black);
-    cursor: var(--primary);
+    scrollbar-color: var(--primary) transparent;
+    scrollbar-width: 25px ;
 }
 
 .container {
@@ -35,7 +36,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 85vh;
-    margin: 5vh 10vw;
+    margin: 75px 10vw;
 }
 
 .img-container {
@@ -148,7 +149,7 @@ img::selection {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    min-height: 10vh;
+    min-height: 75px;
     padding: 2vh 10vw;
     background-color: rgba(237, 244, 255, 0.6);
     backdrop-filter: blur(50px);
@@ -191,6 +192,7 @@ img::selection {
     border-radius: 2px;
     color: var(--primary);
     transition: 0.3s;
+    position: relative;
 }
 
 /* nav ul li:nth-child(n) .nav-link {
@@ -219,7 +221,7 @@ nav ul li:nth-child(3n) .nav-link {
     padding: 10px 0;
     /* position: fixed; */
     width: 100%;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     z-index: 998;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -301,7 +303,7 @@ button:hover {
 
 .dictionaries {
     width: 100%;
-    margin-top: 5vh;
+    /* margin-top: 75px; */
 }
 
 .vidcard video,
@@ -318,7 +320,8 @@ button:hover {
     border: 2px dashed var(--primary);
     border-radius: 10px;
     padding: 25px;
-    margin-top: 5vh;
+    margin-bottom: 25px;
+    /* margin-top: 5vh; */
     display: flex;
     gap: 3vh;
     text-align: justify;
@@ -340,7 +343,7 @@ button:hover {
     border: 2px dashed var(--primary);
     border-radius: 10px;
     padding: 20px;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
     display: flex;
     background-color: rgba(223, 223, 223, 0.07);
     backdrop-filter: blur(2px);
@@ -393,11 +396,11 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2vw;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
 .links {
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -407,6 +410,7 @@ button:hover {
 
 
 .pdfcard {
+    margin-bottom: 25px;
     max-width: 30vw;
     display: flex;
     flex-direction: column;
@@ -781,8 +785,8 @@ footer {
 .award .text {
     max-width: 800px;
     font-size: 20px;
-    font-weight: 100;
-    color: #b58900;
+    font-weight: 500;
+    color: #8d6b04;
     line-height: 1.5;
     text-align: justify;
 }
