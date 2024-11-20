@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --primary: #2f5b75;
+    --primary: #2f5675;
     --red: #752f2f;
     --green: #2f7535;
     --white: #f6f9f6;
@@ -28,7 +28,7 @@ body {
     background-color: var(--white);
     color: var(--black);
     scrollbar-color: var(--primary) transparent;
-    scrollbar-width: 25px ;
+    scrollbar-width: 25px;
 }
 
 .container {
@@ -194,22 +194,6 @@ img::selection {
     transition: 0.3s;
     position: relative;
 }
-
-/* nav ul li:nth-child(n) .nav-link {
-    border-bottom: 1px solid var(--red);
-    color: var(--red);
-}
-
-nav ul li:nth-child(2n) .nav-link {
-    border-bottom: 1px solid var(--green);
-    color: var(--green);
-}
-
-nav ul li:nth-child(3n) .nav-link {
-    border-bottom: 1px solid var(--primary);
-    color: var(--primary);
-} */
-/* styles.css */
 
 /* Style for the notification bar */
 .notification-bar {
