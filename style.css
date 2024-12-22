@@ -656,7 +656,7 @@ footer {
 /* loader */
 .loader-container {
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
@@ -773,4 +773,465 @@ footer {
     color: #8d6b04;
     line-height: 1.5;
     text-align: justify;
+}
+
+
+/* Overlay styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+    overflow: hidden;
+}
+
+/* Drumroll text */
+.overlay .drumroll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #ffd52b;
+    font-family: "Poppins", sans-serif;
+    animation: fadeInOut 4s forwards;
+    z-index: 20;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Curtains */
+.curtains {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 10;
+}
+
+.curtain.left {
+    left: 0;
+    animation: slideLeft 2s ease-in-out forwards;
+    animation-delay: 2s;
+    background: #6a040f;
+}
+
+.curtain.right {
+    right: 0;
+    animation: slideRight 2s ease-in-out forwards;
+    animation-delay: 2s;
+    background: #6a040f;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Book cover styling */
+.book-container {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 2s;
+    z-index: 15;
+}
+
+.book-cover {
+    width: 300px;
+    height: auto;
+    /* box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7); */
+    border-radius: 10px;
+}
+
+/* Fade-in animation for the book cover */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+}
+
+.drum {
+    --drum-yellow: #e9c46a;
+    --drum-dark-yellow: #cf9b1f;
+    --drum-light-red: #ef233c;
+    --drum-dark-red: #6a040f;
+    --drum-white: #edf6f9;
+    --drum-top: #cec2ab;
+    --drum-stick: #887880;
+    --drum-yellow: #e9c46a;
+    --drum-dark-yellow: #cf9b1f;
+    --drum-light-red: #ef233c;
+    --drum-dark-red: #6a040f;
+    --drum-white: #edf6f9;
+    --drum-top: #cec2ab;
+    --drum-stick: #887880;
+
+    position: relative;
+    width: 16rem;
+    height: 17rem;
+    transform: rotate(5deg);
+}
+
+.drum .side {
+    position: absolute;
+    top: 6rem;
+}
+
+.drum .side__bottom {
+    position: absolute;
+    top: 3rem;
+    width: 16rem;
+    height: 8rem;
+    background-color: var(--drum-yellow);
+    border-radius: 0 0 50% 50% / 0 0 2rem 2rem;
+}
+
+.drum .side__bottom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3rem;
+    width: 16rem;
+    height: 9rem;
+    background-color: var(--drum-dark-red);
+    border-radius: 0 0 50% 50% / 0 0 2rem 2rem;
+}
+
+.drum .side__bottom::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3.2rem;
+    width: 16rem;
+    height: 9rem;
+    background-color: var(--drum-light-red);
+    border-radius: 0 0 50% 50% / 0 0 2rem 2rem;
+}
+
+.drum .side__top {
+    position: absolute;
+    width: 16rem;
+    height: 3rem;
+}
+
+.drum .side__top::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16rem;
+    height: 3rem;
+    background-color: var(--drum-dark-red);
+    border-radius: 0 0 50% 50% / 0 0 2rem 2rem;
+}
+
+.drum .side__top::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1.2rem;
+    width: 16rem;
+    height: 4rem;
+    background-color: var(--drum-yellow);
+    border-radius: 0 0 50% 50% / 0 0 2rem 2rem;
+}
+
+.drum .side .pattern {
+    position: absolute;
+    height: 9rem;
+    border-right: 0.4rem solid var(--drum-yellow);
+}
+
+.drum .side .pattern::after,
+.drum .side .pattern.pattern-6::before {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: -0.4rem;
+    position: absolute;
+    background-color: var(--drum-white);
+    border-radius: 50%;
+}
+
+.drum .side .pattern.pattern-1 {
+    transform: translateX(1.6rem) translateY(0.6rem) rotate(-20deg);
+}
+
+.drum .side .pattern.pattern-1::after {
+    top: 0.3rem;
+}
+
+.drum .side .pattern.pattern-2 {
+    transform: translateX(4.4rem) translateY(0.6rem) rotate(20deg);
+}
+
+.drum .side .pattern.pattern-2::after {
+    top: 7.6rem;
+    left: -0.2rem;
+}
+
+.drum .side .pattern.pattern-3 {
+    transform: translateX(6.3rem) translateY(0.6rem) rotate(-20deg);
+}
+
+.drum .side .pattern.pattern-3::after {
+    top: 1.3rem;
+    left: -0.05rem;
+}
+
+.drum .side .pattern.pattern-4 {
+    transform: translateX(9.3rem) translateY(0.6rem) rotate(20deg);
+}
+
+.drum .side .pattern.pattern-4::after {
+    top: 8rem;
+    left: -0.1rem;
+}
+
+.drum .side .pattern.pattern-5 {
+    transform: translateX(11.3rem) translateY(0.6rem) rotate(-20deg);
+}
+
+.drum .side .pattern.pattern-5::after {
+    top: 1.3rem;
+    left: -0.1rem;
+}
+
+.drum .side .pattern.pattern-6 {
+    transform: translateX(14rem) translateY(0.6rem) rotate(20deg);
+}
+
+.drum .side .pattern.pattern-6::before {
+    top: 7.6rem;
+    left: -0.1rem;
+}
+
+.drum .side .pattern.pattern-6::after {
+    top: 0.4rem;
+}
+
+.drum .top {
+    position: absolute;
+    top: 2rem;
+    width: 16rem;
+    height: 5rem;
+    background-color: var(--drum-dark-yellow);
+    border-radius: 50% / 2rem;
+    overflow: hidden;
+}
+
+.drum .top::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1rem;
+    width: 16rem;
+    height: 4rem;
+    background-color: var(--drum-top);
+    border-radius: 50% / 2rem;
+}
+
+.drum .top::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -0.1rem;
+    left: -0.5rem;
+    box-sizing: border-box;
+    width: 17rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    border: 0.4rem solid var(--drum-yellow);
+}
+
+.drum .drum-stick {
+    position: absolute;
+    z-index: 5;
+    width: 12rem;
+    height: 0.6rem;
+    background: var(--drum-stick);
+    border-radius: 50% 20% 20% 50% / 50%;
+    transform-origin: 90% 50%;
+}
+
+.drum .drum-stick::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.6rem;
+    background: var(--drum-stick);
+    border-radius: 50%;
+}
+
+.drum .drum-stick.drum-stick--left {
+    left: -14rem;
+    top: -1rem;
+    transform: rotate(-170deg);
+    animation: anim-drum-stick-left 0.1s infinite;
+}
+
+.drum .drum-stick.drum-stick--right {
+    left: 9rem;
+    top: -1rem;
+    transform: rotate(-30deg);
+    animation: anim-drum-stick-right 0.1s infinite;
+}
+
+.drum .drum-stick-shadow {
+    position: absolute;
+    top: 4rem;
+    width: 3rem;
+    height: 1.5rem;
+    background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%);
+    border-radius: 50%;
+}
+
+.drum .drum-stick-shadow.drum-stick-shadow--left {
+    left: 4.5rem;
+    animation: anim-drum-shadow-left 0.1s infinite;
+}
+
+.drum .drum-stick-shadow.drum-stick-shadow--left {
+    left: 4.5rem;
+    animation: anim-drum-shadow-left 0.1s infinite;
+}
+
+.drum .drum-stick-shadow.drum-stick-shadow--right {
+    left: 9rem;
+    animation: anim-drum-shadow-right 0.1s infinite;
+}
+
+@keyframes anim-drum-stick-left {
+    0% {
+        transform: rotate(-170deg) translateX(1rem);
+    }
+
+    50% {
+        transform: rotate(-150deg) translateX(0);
+    }
+
+    100% {
+        transform: rotate(-170deg) translateX(1rem);
+    }
+}
+
+@keyframes anim-drum-shadow-left {
+    0% {
+        transform: scale(1.6);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0.3;
+    }
+}
+
+
+@keyframes anim-drum-stick-right {
+    0% {
+        transform: rotate(-30deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(-10deg) translateX(1rem);
+    }
+
+    100% {
+        transform: rotate(-30deg) translateX(0);
+    }
+}
+
+@keyframes anim-drum-shadow-right {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.6);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+}
+
+canvas#world {
+    position: absolute;
+
 }
