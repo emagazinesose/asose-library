@@ -41,6 +41,7 @@ class Confetti {
     this.r = ~~range(2, 6);
     this.r2 = 2 * this.r;
     this.replace();
+    this.visible = true; // Initially, the confetti is visible
   }
 
   replace() {
@@ -55,6 +56,8 @@ class Confetti {
   }
 
   draw() {
+    if (!this.visible) return; // If confetti is not visible, don't draw it
+
     this.x += this.vx;
     this.y += this.vy;
     this.opacity += this.dop;
@@ -78,7 +81,20 @@ class Confetti {
 
 const confetti = Array.from({ length: NUM_CONFETTI }, () => new Confetti());
 
+// Duration of the animation in milliseconds (e.g., 5 seconds)
+const animationTime = 7000;
+const stopTime = Date.now() + animationTime; // Calculate the stop time
+
 const step = () => {
+  const remainingTime = stopTime - Date.now();
+
+  if (remainingTime <= 0) {
+    // Stop the confetti animation by hiding the confetti
+    confetti.forEach((c) => {
+      c.visible = false; // Hide confetti after the stop time
+    });
+  }
+
   requestAnimationFrame(step);
   context.clearRect(0, 0, w, h);
   confetti.forEach((c) => c.draw());

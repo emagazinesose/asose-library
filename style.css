@@ -10,6 +10,7 @@
     --black: #2e2e2e;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -75,6 +76,25 @@ body {
     font-size: 45px;
     font-weight: 600;
     text-align: center;
+}
+
+.golden-title {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: #8d6b04;
+    background: linear-gradient(120deg, #8d6b04 0%, #e4bb41 50%, #8d6b04 100%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 2s infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes shimmer {
+    to {
+        background-position-x: 0%
+    }
 }
 
 li {
@@ -689,31 +709,6 @@ footer {
     }
 }
 
-/* awards section magazine */
-
-/* .award {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.award h4 {
-    font-size: 25px;
-    font-weight: 100;
-    width: 800px;
-    text-align: justify;
-}
-
-.awardimg {
-    height: 250px;
-    width: 400px;
-    background-image: url(assets/images/magazine_award.jpg);
-    object-fit: cover;
-} */
-
-/* Style for the award container */
 /* Style for the award container */
 .award {
     display: flex;
@@ -1232,6 +1227,22 @@ footer {
 }
 
 canvas#world {
-    position: absolute;
+    position: fixed;
+    max-width: 98vw;
+    z-index: 999;
+    animation: 7s peeche forwards;
+}
 
+@keyframes peeche {
+    0% {
+        display: block;
+    }
+
+    99% {
+        display: block;
+    }
+
+    100% {
+        display: none;
+    }
 }
