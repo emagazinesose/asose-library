@@ -1,15 +1,15 @@
 // JavaScript to automatically add and control the loader
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Create the loader container element
-  const loaderContainer = document.createElement('div');
-  loaderContainer.className = 'loader-container';
-  loaderContainer.id = 'loader';
+  const loaderContainer = document.createElement("div");
+  loaderContainer.className = "loader-container";
+  loaderContainer.id = "loader";
 
   // Create the loader logo element
-  const loaderLogo = document.createElement('img');
-  loaderLogo.src = 'assets/logo.png'; // Replace with your loader image path
-  loaderLogo.alt = 'Loading...';
-  loaderLogo.className = 'loader-logo';
+  const loaderLogo = document.createElement("img");
+  loaderLogo.src = "assets/logo.png"; // Replace with your loader image path
+  loaderLogo.alt = "Loading...";
+  loaderLogo.className = "loader-logo";
 
   // Append the loader logo to the loader container
   loaderContainer.appendChild(loaderLogo);
@@ -22,33 +22,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Function to remove the loader
   function removeLoader() {
-      const currentTime = new Date().getTime();
-      const elapsedTime = currentTime - loaderStartTime;
+    const currentTime = new Date().getTime();
+    const elapsedTime = currentTime - loaderStartTime;
 
-      // Ensure the loader stays visible for at least 1 second (1000ms)
-      const minimumLoaderTime = 1000;
-      const remainingTime = minimumLoaderTime - elapsedTime;
+    // Ensure the loader stays visible for at least 1 second (1000ms)
+    const minimumLoaderTime = 1000;
+    const remainingTime = minimumLoaderTime - elapsedTime;
 
-      // If the remaining time is positive, wait that amount before removing the loader
-      if (remainingTime > 0) {
-          setTimeout(() => {
-              loaderContainer.style.opacity = '0';
-              loaderContainer.style.transition = 'opacity 0.5s ease-out';
-              setTimeout(() => {
-                  loaderContainer.style.display = 'none';
-              }, 500);
-          }, remainingTime);
-      } else {
-          loaderContainer.style.opacity = '0';
-          loaderContainer.style.transition = 'opacity 0.5s ease-out';
-          setTimeout(() => {
-              loaderContainer.style.display = 'none';
-          }, 500);
-      }
+    // If the remaining time is positive, wait that amount before removing the loader
+    if (remainingTime > 0) {
+      setTimeout(() => {
+        loaderContainer.style.opacity = "0";
+        loaderContainer.style.transition = "opacity 0.5s ease-out";
+        setTimeout(() => {
+          loaderContainer.style.display = "none";
+        }, 500);
+      }, remainingTime);
+    } else {
+      loaderContainer.style.opacity = "0";
+      loaderContainer.style.transition = "opacity 0.5s ease-out";
+      setTimeout(() => {
+        loaderContainer.style.display = "none";
+      }, 500);
+    }
   }
 
   // Listen for the window load event to remove the loader
-  window.addEventListener('load', removeLoader);
+  window.addEventListener("load", removeLoader);
 
   // Fallback: Ensure the loader is removed after a maximum time
   setTimeout(removeLoader, 5000); // Remove the loader after 5 seconds if not removed already
