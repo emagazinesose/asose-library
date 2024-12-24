@@ -9,6 +9,67 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
+    <style>
+      .container *::selection {
+        background-color: #615c00bf;
+        color: var(--white);
+      }
+
+      .golden-title {
+        font-size: 25px;
+      }
+
+      .golden-title:hover {
+        animation: shake 2.5s alternate;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(3px, 5px);
+        }
+        5% {
+          transform: translate(8px, -5px);
+        }
+        10% {
+          transform: translate(-3px, 2px);
+        }
+        20% {
+          transform: translate(0px, -5px);
+        }
+        25% {
+          transform: translate(2px, -5px);
+        }
+        30% {
+          transform: translate(-3px, -3px);
+        }
+        30% {
+          transform: translate(0px, 0px);
+        }
+        40% {
+          transform: translate(2px, 2px);
+        }
+        55% {
+          transform: translate(6px, -5px);
+        }
+        68% {
+          transform: translate(4px, -3px);
+        }
+        80% {
+          transform: translate(-4px, 2px);
+        }
+        85% {
+          transform: translate(2px, -5px);
+        }
+        90% {
+          transform: translate(-8px, 5px);
+        }
+        100% {
+          transform: translate(7px, 6px);
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -55,12 +116,12 @@
     </header>
 
     <section class="container">
-      <div class="">
+      <div class="golden-title">
+        <em>meet the developer of this website</em>
         <h1>Om Prakash Sahoo</h1>
-        <p>Developer of School Library Website</p>
       </div>
       <div class="" style="margin-top: 50px">
-        <h2>About Me</h2>
+        <h2>About OP Sahoo</h2>
         <p>
           Radhey Radhey! I am Om Prakash Sahoo, a Class 11 student. I developed
           the school library website to make it easier for students to access
