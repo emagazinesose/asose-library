@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
+
+    <!-- SEO Settings -->
+    <meta
+      name="description"
+      content="Om Prakash Sahoo, a Class 11 student and web developer, created this library website for ASOSE students to enhance resource accessibility and simplify library management. Explore books, e-magazines, and more."
+    />
+    <meta
+      name="keywords"
+      content="ASOSE Library, School Library Website, Om Prakash Sahoo, Book Reviews, e-Resources"
+    />
+    <meta name="author" content="Om Prakash Sahoo" />
     <style>
       .container *::selection {
         background-color: #615c00bf;
@@ -19,6 +30,8 @@
 
       .golden-title {
         font-size: 25px;
+        text-align: center;
+        margin-top: 20px;
       }
 
       .golden-title:hover {
@@ -26,47 +39,34 @@
       }
 
       @keyframes shake {
-        0% {
-          transform: translate(3px, 5px);
-        }
-        5% {
-          transform: translate(8px, -5px);
-        }
-        10% {
-          transform: translate(-3px, 2px);
-        }
-        20% {
-          transform: translate(0px, -5px);
-        }
-        25% {
-          transform: translate(2px, -5px);
-        }
-        30% {
-          transform: translate(-3px, -3px);
-        }
-        30% {
+        0%,
+        100% {
           transform: translate(0px, 0px);
         }
-        40% {
-          transform: translate(2px, 2px);
+        25% {
+          transform: translate(-5px, 5px);
         }
-        55% {
-          transform: translate(6px, -5px);
+        50% {
+          transform: translate(5px, -5px);
         }
-        68% {
-          transform: translate(4px, -3px);
+        75% {
+          transform: translate(-5px, -5px);
         }
-        80% {
-          transform: translate(-4px, 2px);
+      }
+
+      iframe {
+        margin-top: 50px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+      }
+
+      @media (max-width: 768px) {
+        .golden-title {
+          font-size: 20px;
         }
-        85% {
-          transform: translate(2px, -5px);
-        }
-        90% {
-          transform: translate(-8px, 5px);
-        }
-        100% {
-          transform: translate(7px, 6px);
+
+        iframe {
+          height: 400px;
         }
       }
     </style>
@@ -75,7 +75,7 @@
     <header class="header">
       <nav class="real">
         <a href="index.html" class="nav-logo"
-          ><img src="assets/logo.png" alt="logo" height="40px" />
+          ><img src="assets/logo.png" alt="School Logo" height="40px" />
           <p>ASOSE, Sector 11, Rohini</p></a
         >
         <ul class="nav-menu">
@@ -98,7 +98,7 @@
             <a href="antipp.html" class="nav-link">Policies</a>
           </li>
           <li class="nav-item">
-            <a href="gallery.html" class="nav-link">Gallery </a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -107,20 +107,14 @@
           <span class="bar"></span>
         </div>
       </nav>
-
-      <nav class="navbar">
-        <a href="index.html" class="nav-logo">
-          <p>ASOSE, Sector 11, Rohini</p></a
-        >
-      </nav>
     </header>
 
     <section class="container">
       <div class="golden-title">
-        <em>meet the developer of this website</em>
+        <em>Meet the Developer of This Website</em>
         <h1>Om Prakash Sahoo</h1>
       </div>
-      <div class="" style="margin-top: 50px">
+      <div style="margin-top: 50px">
         <h2>About OP Sahoo</h2>
         <p>
           Radhey Radhey! I am Om Prakash Sahoo, a Class 11 student. I developed
@@ -131,7 +125,6 @@
       </div>
       <iframe
         src="https://opsahoo.netlify.app"
-        style="margin-top: 50px; border-radius: 25px"
         width="100%"
         height="600"
         frameborder="0"
