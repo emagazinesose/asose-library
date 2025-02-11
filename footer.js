@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add content to the footer
   footer.innerHTML = `
+      <p>Developed & Maintained with &hearts; by <a style="font-size:18px" href="/developer.html">Om Sahoo</a></p>
       <p>&copy; 2024 ASOSE, Sector 11, Rohini</p>
-      <p>Developed & Maintained with &hearts; by <a class="golden-title" style="font-size:18px" href="/developer.html">Om Sahoo</a></p>
     `;
 
   // Append the footer to the body

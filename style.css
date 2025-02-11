@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
 :root {
     --primary: #2f5675;
@@ -15,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", serif;
 }
 
 *::selection {
@@ -24,7 +24,6 @@
 
 html,
 body {
-    font-family: "Teachers", sans-serif;
     font-weight: 400;
     background-color: var(--white);
     color: var(--black);
@@ -78,18 +77,6 @@ body {
     text-align: center;
 }
 
-.golden-title {
-    font-size: 50px;
-    font-weight: 600;
-    text-align: center;
-    color: #8d6b04;
-    background: linear-gradient(120deg, #8d6b04 0%, #c99d1b 50%, #8d6b04 100%);
-    background-size: 300%;
-    background-position-x: 100%;
-    animation: shimmer 2s infinite alternate;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 @keyframes shimmer {
     to {
@@ -107,7 +94,12 @@ a {
 }
 
 footer a {
-    color: #e4bb41;
+    color: #e9c46a;
+}
+
+footer a:hover {
+    color: #cf9b1f;
+    transition: 0.25s;
 }
 
 ul a {
@@ -119,8 +111,8 @@ em {
     width: 100%;
     text-align: right;
     color: var(--primary);
-    font-weight: 500;
-    font-family: "Spectral", serif;
+    font-weight: 800;
+    font-family: "Allura", serif;
     font-style: normal;
 }
 
@@ -130,8 +122,8 @@ em {
     font-size: 35px;
     text-align: center;
     color: var(--primary);
-    font-weight: 500;
-    font-family: "Spectral", serif;
+    font-weight: 800;
+    font-family: "Allura", serif;
     font-style: normal;
 }
 
@@ -447,6 +439,9 @@ button:hover {
 
 .vidcard .bookname,
 .vidcard .bookreviewer {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Allura", serif;
     color: var(--primary);
 }
 
