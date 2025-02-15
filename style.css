@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --primary: #2f5675;
+    --primary: #346473;
     --red: #752f2f;
     --green: #2f7535;
     --white: #f6f9f6;
-    --grey: #dfdfdf;
+    --grey: #d1ebfe45;
     --black: #2e2e2e;
 }
 
@@ -158,18 +158,14 @@ img::selection {
     color: var(--primary);
 }
 
-.header {
-    border-bottom: 1px solid var(--grey);
-}
-
 .real {
     position: fixed;
     z-index: 1000;
     width: 100%;
     min-height: 75px;
     padding: 2vh 10vw;
-    background-color: rgba(237, 244, 255, 0.6);
-    backdrop-filter: blur(50px);
+    background-color: var(--grey);
+    backdrop-filter: blur(25px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -258,10 +254,8 @@ img::selection {
 }
 
 .nav-link:hover {
-    /* background-color: var(--primary); */
-    border-top: 1px var(--primary) solid;
-    border-bottom: 1px solid var(--primary);
-    padding: 2px 10px;
+    color: var(--black);
+    /* padding: 2px 10px; */
     transition: 0.3s;
 }
 
