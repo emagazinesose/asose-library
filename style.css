@@ -181,7 +181,7 @@ img::selection {
     width: 95vw;
     min-height: 75px;
     padding: 2vh 2vw;
-    background-color: var(--grey);
+    background-color: var(--grey)dd;
     backdrop-filter: blur(1000px);
     display: flex;
     border-radius: 15px;
