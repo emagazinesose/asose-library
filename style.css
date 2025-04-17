@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --primary: #346473;
-    --red: #752f2f;
-    --green: #2f7535;
-    --white: #f6f9f6;
-    --grey: #e7f9ff;
-    --black: #2e2e2e;
+    --primary: #005656;
+    --red: #d64545;
+    --green: #2eb872;
+    --white: #ffffff;
+    --grey: 188, 244, 253;
+    --black: #1e2b2b;
 }
 
 
@@ -26,6 +26,7 @@
 html,
 body {
     font-weight: 400;
+    background-color: var(--white);
     /* background-color: var(--white);
     color: var(--black);
     scrollbar-color: var(--primary) transparent;
@@ -158,7 +159,7 @@ abbr[title]:hover::after {
     z-index: 1;
     background: var(--primary);
     color: var(--white);
-    border: 1px solid var(--grey);
+    border: 1px solid rgb(var(--grey));
     padding: 5px;
     font-size: 18px;
 }
@@ -181,8 +182,8 @@ img::selection {
     width: 95vw;
     min-height: 75px;
     padding: 2vh 2vw;
-    background-color: var(--grey)dd;
-    backdrop-filter: blur(1000px);
+    background-color: rgba(var(--grey), 0.35);
+    backdrop-filter: blur(50px);
     display: flex;
     border-radius: 15px;
     justify-content: space-between;
